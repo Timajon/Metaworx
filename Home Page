@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meta Worx Auto Body Repairs</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Welcome to Meta Worx Auto Body Repairs</h1>
+      <p class="tagline">Quality Repairs for Your Vehicle</p>
+      <a href="contact.html" class="button">Get a Quote</a>
+    </section>
+
+    <section class="about">
+      <h2>About Us</h2>
+      <p>Meta Worx Auto Body Repairs is a leading auto body repair shop committed to providing top-quality repairs and exceptional customer service. With our team of skilled technicians and state-of-the-art facilities, we can restore your vehicle to its pre-accident condition.</p>
+      <a href="contact.html" class="button">Contact Us</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Meta Worx Auto Body Repairs. All rights reserved.</p>
+  </footer>
+</body>
+</html>
