@@ -1,0 +1,16 @@
+{
+  "name": "Metaworx static site",
+  "install": "python3 --version",
+  "terminals": [
+    {
+      "name": "web",
+      "command": "python3 .cursor/dev-server.py"
+    }
+  ],
+  "ports": [
+    {
+      "name": "web",
+      "port": 8000
+    }
+  ]
+}
