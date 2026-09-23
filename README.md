@@ -2,7 +2,7 @@
 
 Static website for the Metaworx workshop in Riverside Park, Mbombela (Nelspruit).
 
-The shop is listed as Meta Worx Lowveld and Meta Worx Autobody Lowveld, an Auto Magic authorised agent and SAMBRA approved repairer at 2 Cascades Close.
+The shop is listed as Meta Worx Lowveld and Meta Worx Autobody Lowveld, an Auto Magic authorised agent and SAMBRA approved repairer at 2 Cascades Close. DMR Nelspruit belongs to Metaworx.
 
 ## Pages
 
