@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://timajon.github.io/Metaworx/sitemap.xml

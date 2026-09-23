@@ -252,6 +252,23 @@ a:hover {
   align-items: center;
 }
 
+.crumbs {
+  margin: 0 0 0.85rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--brass-bright);
+}
+
+.crumbs a {
+  color: var(--cream);
+  text-decoration: none;
+}
+
+.crumbs a:hover {
+  color: var(--brass-bright);
+}
+
 .kicker {
   margin: 0 0 0.8rem;
   letter-spacing: 0.16em;
