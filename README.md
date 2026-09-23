@@ -7,7 +7,7 @@ The shop is listed as Meta Worx Lowveld and Meta Worx Autobody Lowveld, an Auto 
 ## Pages
 
 - `index.html` — home
-- `services.html` — panel beating, paint, dents, hail, parts, insurance assessments
+- `services.html` — panel beating, paint, dents, hail, diamond magrim repair, parts, insurance assessments
 - `about.html` — the workshop and what to bring
 - `contact.html` — phone, map, and an assessment enquiry that opens the visitor’s email app
 
