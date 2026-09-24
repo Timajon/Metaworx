@@ -435,13 +435,14 @@ input:focus, select:focus, textarea:focus {
 }
 .map-frame iframe, .gmap {
   width: 100%;
-  min-height: 360px;
-  height: 100%;
+  min-width: 0;
+  min-height: 320px;
+  height: 340px;
   border: 0;
   border-radius: 14px;
   background: var(--paper);
 }
-.map-grid { grid-template-columns: 1.2fr 0.8fr; }
+.map-grid { grid-template-columns: 1fr 1fr; min-width: 0; }
 address { font-style: normal; }
 .hours { list-style: none; padding: 0; margin: 0.6rem 0; }
 .hours li { display: flex; justify-content: space-between; gap: 1rem; padding: 0.25rem 0; }
