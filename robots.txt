@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://raw.githack.com/Timajon/Metaworx/gh-pages/sitemap.xml
