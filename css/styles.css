@@ -1,12 +1,13 @@
 :root {
   --red: #eb1c24;
   --red-hover: #d11219;
-  --ink: #1f2327;
-  --muted: #5c6570;
-  --line: #ededed;
-  --paper: #f8f8f8;
+  --navy: #0a2342;
+  --ink: #0a2342;
+  --muted: #4a5c73;
+  --line: #e2e8f0;
+  --paper: #f4f7fb;
   --white: #ffffff;
-  --shadow: 0 12px 40px rgba(31, 35, 39, 0.08);
+  --shadow: 0 12px 40px rgba(10, 35, 66, 0.1);
   --radius: 12px;
   --max: 1120px;
   --font: "Inter", "Segoe UI", Arial, sans-serif;
@@ -196,13 +197,13 @@ a:hover { color: var(--red); }
   display: flex;
   align-items: center;
   color: #fff;
-  background: #1f2327 center/cover no-repeat;
+  background: var(--navy) center/cover no-repeat;
 }
 .hero-photo::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.58);
+  background: rgba(10, 35, 66, 0.72);
 }
 .hero-copy {
   position: relative;
@@ -504,7 +505,7 @@ address { font-style: normal; }
 .process { background: var(--paper); }
 
 .site-footer {
-  background: #1f2327;
+  background: var(--navy);
   color: rgba(255, 255, 255, 0.82);
 }
 .footer-inner { max-width: var(--max); margin: 0 auto; padding: 2.4rem 1rem 1.4rem; }
