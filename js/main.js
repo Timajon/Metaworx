@@ -26,7 +26,9 @@
   const page = document.body.dataset.page;
   document.querySelectorAll("[data-nav] a").forEach(function (link) {
     const href = link.getAttribute("href") || "";
-    if (href.replace(".html", "") === page || (page === "home" && href.indexOf("index") !== -1)) {
+    if (href.indexOf("#") !== -1) return;
+    const path = href.replace(".html", "");
+    if (path === page || (page === "home" && path.indexOf("index") !== -1)) {
       link.setAttribute("aria-current", "page");
     }
   });
@@ -55,6 +57,7 @@
     const phone = String(data.get("phone") || "").trim();
     const email = String(data.get("email") || "").trim();
     const vehicle = String(data.get("vehicle") || "").trim();
+    const service = String(data.get("service") || "").trim();
     const insurer = String(data.get("insurer") || "").trim();
     const message = String(data.get("message") || "").trim();
     let valid = true;
@@ -89,6 +92,7 @@
       "Phone: " + phone,
       "Email: " + (email || "Not given"),
       "Vehicle: " + (vehicle || "Not given"),
+      "Service: " + (service || "Not given"),
       "Insurer / claim: " + (insurer || "Not given"),
       "",
       message
