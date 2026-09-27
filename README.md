@@ -48,6 +48,7 @@ npm start
 
 - Engine: http://127.0.0.1:8787
 - Dashboard: http://127.0.0.1:3000
+- Android app: `apps/android` (see below)
 
 Development, with reload:
 
@@ -85,7 +86,7 @@ Live trading also requires:
 
 Assisted live queues each strategy order for confirmation. Automatic live can submit inside those limits. Restarting the engine keeps the saved mode; it does not upgrade paper to live by itself. Selling holdings is a separate control and requires the phrase `SELL HOLDINGS`. Cancelling open orders does not sell the position.
 
-If the engine binds anything other than loopback, set `SIGNALFORGE_ACCESS_TOKEN`. The web UI then requires that token and refuses to start for a non-local host without it.
+If the engine binds anything other than loopback, set `SIGNALFORGE_ACCESS_TOKEN`. The web UI then requires that token and refuses to start for a non-local host without it. The Android app sends the same token and refuses to save a public `http://` URL.
 
 ## Trading behaviour
 
@@ -108,6 +109,30 @@ npm test
 
 The suite covers decimal precision, ask-side paper fills, partial fills, fill-or-kill, execution delay, accounting versus deposits, risk limits, stale data, the pause control, invalid Grok payloads, ambiguous submit reconciliation, duplicate client ids, restart recovery, the single-engine lock, and look-ahead-safe strategy comparison. Live tests use an in-memory gateway. They do not place real orders.
 
+## Android app
+
+The APK is a client for the engine. It does not embed Luno or xAI keys, and it does not place orders by itself. Trading still runs in the Node process.
+
+On the machine that runs the engine:
+
+```bash
+# .env
+SIGNALFORGE_BIND=0.0.0.0
+SIGNALFORGE_ACCESS_TOKEN=choose-a-long-random-token
+```
+
+Restart with `npm start`. On the phone, enter `http://<lan-address>:8787` and that token. An emulator uses `http://10.0.2.2:8787`. HTTP is accepted only for localhost and private LAN addresses. A public host must use HTTPS.
+
+Build a debug APK (Android SDK 35, JDK 17+):
+
+```bash
+cd apps/android
+echo "sdk.dir=$ANDROID_HOME" > local.properties
+./gradlew testDebugUnitTest assembleDebug
+```
+
+The installable file is `apps/android/app/build/outputs/apk/debug/app-debug.apk`. Install it with `adb install -r` that path. The debug build is signed with the local debug keystore.
+
 ## Limitations
 
 - Candles, fees, balances, and order history need a Luno key. Demo charts are derived from polled tickers.
@@ -118,3 +143,4 @@ The suite covers decimal precision, ask-side paper fills, partial fills, fill-or
 - Grok confidence is not calibrated against outcomes. The comparison panel replays stored observations; it is not a promise of profit.
 - `node:sqlite` prints an experimental warning on Node 22.
 - Withdrawals, sends, beneficiaries, margin, and leverage are intentionally absent.
+- The Android package is a debug APK signed with the local debug keystore. It is a client of the engine, not a second trading process.
