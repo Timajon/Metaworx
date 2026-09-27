@@ -1,0 +1,17 @@
+{
+  "name": "signalforge",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "npm run build -w @signalforge/core && npm run build -w @signalforge/engine && npm run build -w @signalforge/web",
+    "test": "npm run test -w @signalforge/core && npm run test -w @signalforge/engine",
+    "dev": "concurrently -n engine,web -c blue,green \"npm run dev -w @signalforge/engine\" \"npm run dev -w @signalforge/web\"",
+    "start": "concurrently -n engine,web -c blue,green \"npm run start -w @signalforge/engine\" \"npm run start -w @signalforge/web\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
