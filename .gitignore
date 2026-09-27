@@ -11,3 +11,9 @@ data/
 coverage/
 .DS_Store
 apps/web/.env.local
+apps/android/.gradle/
+apps/android/.kotlin/
+apps/android/build/
+apps/android/app/build/
+apps/android/local.properties
+apps/android/.idea/
